@@ -41,8 +41,3 @@ const buildWrapper = (config) => {
 }
 
 export default buildWrapper
-
-export {
-    default as buildWrapper,
-    Config as BuildWrapperConfig
-} from "./index"
