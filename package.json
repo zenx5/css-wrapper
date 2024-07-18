@@ -1,0 +1,25 @@
+{
+  "name": "csswrapper",
+  "version": "1.0.0",
+  "description": "Wrapper generator for your css file",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zenx5/css-wrapper.git"
+  },
+  "keywords": [
+    "css",
+    "tailwindcss",
+    "wordpress",
+    "wrapper"
+  ],
+  "author": "Octavio Martinez <omartinez1618@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zenx5/css-wrapper/issues"
+  },
+  "homepage": "https://github.com/zenx5/css-wrapper#readme"
+}
