@@ -4,7 +4,7 @@ const buildWrapper = (tagWrapper = '#root', buildPathCss = './dist/assets') => (
     try{
         console.log('buildWrapper')
         if(
-            process.env.npm_lifecycle_event === 'build' ||
+            process.env.npm_lifecycle_event === 'postbuild' ||
             process.env.npm_lifecycle_event === 'own:start' ||
             process.env.npm_lifecycle_event === 'own:start:with'
         ) {
