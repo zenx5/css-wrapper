@@ -1,5 +1,14 @@
 import fs from 'fs'
 
+
+/**
+ * Construye un wrapper CSS según la configuración proporcionada.
+ * @param {Object} config - Objeto de configuración para la construcción del wrapper.
+ * @param {boolean} [config.forceExecution=false] - Fuerza la ejecución del wrapper.
+ * @param {string} [config.tagWrapper='#root'] - Selector del wrapper.
+ * @param {string} [config.buildPathCss='./dist/assets'] - Ruta de construcción para los archivos CSS.
+ */
+
 const buildWrapper = (config) => {
     try{
         const tagWrapper = config?.tagWrapper ?? '#root'
@@ -32,3 +41,8 @@ const buildWrapper = (config) => {
 }
 
 export default buildWrapper
+
+export {
+    default as buildWrapper,
+    Config as BuildWrapperConfig
+} from "./index"
