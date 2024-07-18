@@ -5,4 +5,4 @@ const args = process.argv.slice(2)
 const [tagWrapper, buildPathCss] = args
 
 // run buildWrapper function
-buildWrapper(tagWrapper, buildPathCss)()
+buildWrapper({ forceExecution:true, tagWrapper, buildPathCss})

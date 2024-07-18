@@ -1,9 +1,12 @@
 import fs from 'fs'
 
-const buildWrapper = (tagWrapper = '#root', buildPathCss = './dist/assets') => () => {
+const buildWrapper = (config) => {
     try{
-        console.log('buildWrapper')
+        const tagWrapper = config?.tagWrapper ?? '#root'
+        const buildPathCss = config?.buildPathCss ?? './dist/assets'
+        const forceExecution = config?.forceExecution ?? false
         if(
+            forceExecution ||
             process.env.npm_lifecycle_event === 'postbuild' ||
             process.env.npm_lifecycle_event === 'own:start' ||
             process.env.npm_lifecycle_event === 'own:start:with'
@@ -17,7 +20,6 @@ const buildWrapper = (tagWrapper = '#root', buildPathCss = './dist/assets') => (
                     if( data.includes(tagWrapper) ) return
                     const content = `${tagWrapper} { ${data} }`
                     fs.writeFile(`${buildPathCss}/${cssFile}`, content, 'utf8', (err) => {
-                        console.log('Wrapper added')
                         if (err) throw err
                     })
                 })
